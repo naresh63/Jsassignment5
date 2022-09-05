@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>JS assign 5</h1>
+    <script>
+      //1. Write a JavaScript program to get the volume of a Cylinder, Sphere and Cone with four decimal places using objects and classes.
+      // Create classes for volumes for each geometric shape which returns the output using the getVolume() method.
+
+      class Cylinder {
+        constructor(radius, height) {
+          this.radius = radius;
+          this.height = height;
+        }
+        getVolume() {
+          let volume = Math.PI * this.radius * this.radius * this.height;
+          return volume.toFixed(4);
+        }
+      }
+      let objCylinder = new Cylinder(5, 3);
+      console.log(objCylinder.getVolume());
+      // sphere
+      class Sphere {
+        constructor(radius) {
+          this.radius = radius;
+        }
+        getVolume() {
+          let volume =
+            (4 / 3) * Math.PI * this.radius * this.radius * this.radius;
+          return volume.toFixed(4);
+        }
+      }
+      let objSphere = new Sphere(5);
+      console.log(objSphere.getVolume());
+      //cone
+      class Cone {
+        constructor(radius, height) {
+          this.radius = radius;
+          this.height = height;
+        }
+        getVolume() {
+          let volume = (Math.PI * this.radius * this.radius * this.height) / 3;
+          return volume.toFixed(4);
+        }
+      }
+      let objCone = new Cone(10, 5);
+      console.log(objCone.getVolume());
+    </script>
+  </body>
+</html>
